@@ -32,5 +32,6 @@ public class If_1 {
         System.out.printf("%s","남자".equals(gen) || "여자".equals(gen)
                 ? ("남자".equals(gen) ? m : w )
                 : o );
+        System.out.println();
     }
 }
