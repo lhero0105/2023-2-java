@@ -2,6 +2,7 @@ package com.green.day2.ch2;
 // Scanner - 화면으로부터 데이터를 입력받는 기능을 제공하는 클래스
 // import문 추가
 // Scanner 객체의 생성
+// Scanner 가 int타입으로 형변환도 시켜줍니다.
 import java.util.Scanner;
 
 public class ScannerEx {
