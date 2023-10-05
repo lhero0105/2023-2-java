@@ -2,7 +2,7 @@ package com.green.day7.ch5;
 // + 코드 로직
 public class Arrat3Mission_2 {
     public static void main(String[] args) {
-        int[] arr1 = { 5, 10, 15 };
+        int[] arr1 = { 5, 10, 15, 16, 17, 18, 19, 20 };
         int[] arr2 = new int[arr1.length+1];
 
         for (int i = 0; i < arr1.length; i++) {
