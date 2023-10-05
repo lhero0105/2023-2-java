@@ -1,5 +1,5 @@
 package com.green.day7.ch5;
-
+// + 코드 로직
 public class Arrat3Mission_2 {
     public static void main(String[] args) {
         int[] arr1 = { 5, 10, 15 };
