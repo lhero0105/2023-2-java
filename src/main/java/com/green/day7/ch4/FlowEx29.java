@@ -38,5 +38,14 @@ public class FlowEx29 {
             }
             System.out.println();
         }
+        for (int i = 1; i < 101; i++) {
+            System.out.printf("i=%d", i);
+            int tmp = i;
+            do{
+                if(tmp %10 % 3 == 0 && tmp % 10 != 0){
+                    System.out.println("짝");
+                }
+            }while ((tmp /= 10) != 0);
+        }
     }
 }

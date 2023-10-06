@@ -17,7 +17,7 @@ public class Array2 {
         System.out.println("----------");
 
         arr1[1] = 44;
-        arr1[2] = 55;
+        arr2[2] = 55;
 
         for (int i = 0; i < arr1.length; i++) {
             System.out.printf("arr1[%d]: %d\n", i, arr1[i]);

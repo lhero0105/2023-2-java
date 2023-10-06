@@ -3,7 +3,17 @@ package com.green.day7.ch5;
 public class Array3 {
     public static void main(String[] args) {
         int[] arr1 = { 5, 10, 15, 20};
-        int[] arr2 = new int[arr1.length]; // new 연산자로 만든 배열이기에 메모리 저장영역이 다릅니다.
+        int[] arr2 = new int[arr1.length+1]; // new 연산자로 만든 배열이기에 메모리 저장영역이 다릅니다.
+        // 배열의 생성과 선언을 따로 하는 경우, new연산자 생략이 불가능합니다.
+        // String 배열에서 초기화 할 때 null(주솟값이x)이 된다
+
+/*        arr2 = arr1;
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.println(arr2[i]);
+        }*/
+        String[] arr3 = new String[arr1.length];
+        String[] str = arr3;
+        // String str = arr3; // error
 
         for (int i = 0; i < arr1.length; i++) {
             arr2[i] = arr1[i]; // arr이 가지고있는 공간에 값을 넣어줍니다.
@@ -11,6 +21,7 @@ public class Array3 {
 
         // 동등성( equals ), 동일성( == )
         // 얖은복사는 동등성, 동일성 모두 true
+        // 깊은복사는 동등성true, 동일성 false 일 수 있다.
 
         arr2[1] = 200;
         for (int i = 0; i < arr1.length; i++) {
