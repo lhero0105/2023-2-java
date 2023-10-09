@@ -19,6 +19,6 @@ public class ArrayEx2 {
         }
         System.out.println(array);
         System.out.println(array.toString());// 배열을 String으로 바꿔줍니다.
-        System.out.println(Arrays.toString(array)); // api 에서 toString매서드가 자동적으로 반복문을 만들어 배열을 찍습니다.
+        System.out.println(Arrays.toString(array)); // api 에서 Arrays가 자동적으로 반복문을 만들어 배열을 찍습니다.
     }
 }
