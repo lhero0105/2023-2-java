@@ -13,20 +13,21 @@ public class ArrayEx16 {
         값 넣는게 종료가 되면 향상된 for문을 이용하여
         저장되어있는 값들을 콘솔에 출력한다.
          */
-        String[] str = new String[3];
+        String[] strArr = new String[3];
         Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < str.length; i++) {
+        for (int i = 0; i < strArr.length; i++) {
+            System.out.print("문자열을 입력해주세요 >>");
             String input = scanner.nextLine();
-            str[i] = input;
+            strArr[i] = input;
         }
         System.out.print("[");
-        for (String strE: str ) {
+        for (String strE : strArr) {
             System.out.print(strE);
             System.out.print(", ");
         }
         System.out.print("]");
         System.out.println();
-        System.out.println(Arrays.toString(str));
+        System.out.println(Arrays.toString(strArr));
     }
 }
