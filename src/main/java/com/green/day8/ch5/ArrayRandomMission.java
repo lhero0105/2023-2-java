@@ -7,7 +7,7 @@ public class ArrayRandomMission {
                 /*
         5개의 방을 갖고 있는 정수형 배열을 만드시고
         각방의 1~10의 랜덤한 값을 넣어주세요
-        중복허용
+        중복x
          */
         int[] array = new int[5];
 

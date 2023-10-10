@@ -1,4 +1,7 @@
 package com.green.day7.ch5;
+
+import java.util.Arrays;
+
 // 깊은복사
 public class Array3 {
     public static void main(String[] args) {
@@ -7,10 +10,9 @@ public class Array3 {
         // 배열의 생성과 선언을 따로 하는 경우, new연산자 생략이 불가능합니다.
         // String 배열에서 초기화 할 때 null(주솟값이x)이 된다
 
-/*        arr2 = arr1;
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.println(arr2[i]);
-        }*/
+        arr2 = arr1;
+        System.out.println(Arrays.toString(arr2));
+
         String[] arr3 = new String[arr1.length];
         String[] str = arr3;
         // String str = arr3; // error

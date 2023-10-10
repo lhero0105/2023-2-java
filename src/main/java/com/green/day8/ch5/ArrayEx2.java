@@ -9,11 +9,12 @@ public class ArrayEx2 {
         각방의 1~10의 랜덤한 값을 넣어주세요
         중복허용
          */
-        int[] array = new int[5];
+        final int LEN = 5; // 매직넘버
+        int[] array = new int[LEN];
         for (int i = 0; i < array.length; i++) {
             int random = (int)(Math.random()*10) + 1;
             array[i] = random;
-        }
+        } // 읽기 / 쓰기 작업을 따로 합니다.
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }

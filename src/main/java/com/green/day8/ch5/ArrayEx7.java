@@ -14,11 +14,11 @@ public class ArrayEx7 {
 
         int tmp = 0;
         for (int i = 0; i < num.length; i++) {
-            int ran = (int)(Math.random()*10); //0~9
-            if(i == ran) {continue;}
+            int rIdx = (int)(Math.random()*10); //0~9
+            if(i == rIdx) {continue;}
             tmp = num[i];
-            num[i] = num[ran];
-            num[ran] = tmp;
+            num[i] = num[rIdx];
+            num[rIdx] = tmp;
         }
         System.out.println(Arrays.toString(num));
 

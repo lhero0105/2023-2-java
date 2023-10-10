@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class ArrayEx8 {
     public static void main(String[] args) {
-        int[] ball = new int[45];
+        int ballLength = 45;
+        int[] ball = new int[ballLength];
 
         for (int i = 0; i < ball.length; i++) {
             ball[i] = i+1;
