@@ -17,4 +17,6 @@ public class NumberBox {
         if(n1<0){ n1 *= -1; }
         System.out.println(n1);
     }
+
+
 }

@@ -7,7 +7,24 @@ public class MethodExamTest {
         me.checkZero(9);
         me.checkZero(0);
 
-        int r = me.randomValFromTo(10,100);
+        int r = me.randomValFromTo(10, 100);
         System.out.println(r);
+
+        for (int i = 0; i < 10000; i++) { // 검증
+             r = me.randomValFromTo(10, 100);
+            if (r < 10 || r > 100){
+                System.out.println("잘못된 값!!!");
+                break;
+            }
+        }
+
+        me.scoreResultPrint(101); // 잘못된 점수입니다.
+        me.scoreResultPrint(100); // A학점
+        me.scoreResultPrint(90); // A학점
+        me.scoreResultPrint(89); // B학점
+        me.scoreResultPrint(88); // B학점
+        me.scoreResultPrint(79); // C학점
+        me.scoreResultPrint(69); // D학점
+
     }
 }
