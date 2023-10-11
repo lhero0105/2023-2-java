@@ -32,6 +32,10 @@ public class ArrayEx11_2 {
         cntArr[3]++;
         */
 
+        for ( int Idx: numArr) {
+            cntArr[Idx]++;
+        }
+
         for (int i = 0; i < LEN; i++) {
             int val = numArr[i];
             cntArr[val]++;
@@ -43,8 +47,8 @@ public class ArrayEx11_2 {
 
 
 
-        /*for (int i = 0; i < numArr.length; i++) {
+        for (int i = 0; i < numArr.length; i++) {
             System.out.printf("%d의 개수: %d\n", i, cntArr[i]);
-        }*/
+        }
     }
 }

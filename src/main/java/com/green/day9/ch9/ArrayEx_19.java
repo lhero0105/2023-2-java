@@ -45,5 +45,14 @@ public class ArrayEx_19 {
             }
             System.out.printf("%5d", sum);
         }
+/*        System.out.println("------------------------------");
+        System.out.print("총점");
+        for (int[] row: score) {
+            int sum = 0;
+            for (int col : row) {
+                sum += col;
+            }
+            System.out.printf("%5d", sum);
+        }*/
     }
 }

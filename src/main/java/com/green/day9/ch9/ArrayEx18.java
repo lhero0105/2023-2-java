@@ -28,6 +28,7 @@ public class ArrayEx18 {
             }
         }
         System.out.printf("sum = %d", sum);
+        sum =0;
 
         // 향상된 for문을 이용하여 sum 값을 구하고 싶다.
         for (int[] arr: score) { // 배열 타입

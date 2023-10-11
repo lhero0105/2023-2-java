@@ -18,8 +18,8 @@ public class ArrayEx16 {
 
         for (int i = 0; i < strArr.length; i++) {
             System.out.print("문자열을 입력해주세요 >>");
-            String input = scanner.nextLine();
-            strArr[i] = input;
+            String val = scanner.nextLine();
+            strArr[i] = val;
         }
         System.out.print("[");
         for (String strE : strArr) {

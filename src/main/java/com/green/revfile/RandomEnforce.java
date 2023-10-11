@@ -24,7 +24,7 @@ public class RandomEnforce {
         Loop1 : while ( 0 < grade && grade < 10){
             switch (input) {
                 case "go" :
-                    int random = (int) (Math.random()*(max-1))+min;
+                    int random = (int) (Math.random()*(max-min+1))+min;
                     System.out.printf("현재 강화등급 : %d\n", (random > 2) ? ++grade : --grade ); // ex) random > 4 60%확률
                     if(0 < grade && grade < 10){
                         System.out.println("go / stop :");
