@@ -34,5 +34,6 @@ public class MethodExam {
             grade = 'D';
         }
         System.out.printf("%c학점", grade);
+        //dddd
     }
 }
