@@ -10,6 +10,7 @@ public class Card {
             case "J": return 11;
             case "Q": return 12;
             case "K": return 13;
+            //dw
         }
         int n1 = Integer.parseInt(number);
         return n1;
