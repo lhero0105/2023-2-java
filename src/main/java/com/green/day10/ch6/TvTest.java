@@ -7,7 +7,7 @@ public class TvTest {
 
         Tv tv1 = new Tv(); // Tv1 - 참조형 타입의 주솟값을 담을 수 있습니다.
         tv1.channel = 10;
-        tv1.power = true; // 불린형은 디폴트값이 false?
+        tv1.power = true; // 불린형은 디폴트값이 false
         tv1.color = "빨간색";
 
         Tv tv2 = new Tv();

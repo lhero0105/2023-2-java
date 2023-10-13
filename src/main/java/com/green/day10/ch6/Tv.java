@@ -11,6 +11,6 @@ public class Tv {
     // 리턴타입 매소드명 파라미터는 무조건 있습니다.
     void power() { power = !power;} // 선언부, {}구현부
     // 매소드 정의 <> power() : 매소드 호출
-    void channelup() { channel++; }
+    void channelup() { channel++; } // { this.channel++; } this상수(참조변수)가 자동으로 입력됩니다.
     void channeldown() { channel--; }
 }
