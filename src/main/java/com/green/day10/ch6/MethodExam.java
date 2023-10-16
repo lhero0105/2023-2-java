@@ -10,8 +10,6 @@ public class MethodExam {
             return;
         }
         System.out.println("0이 아닙니다");
-
-
     }
 
     int randomValFromTo(int from, int to) {

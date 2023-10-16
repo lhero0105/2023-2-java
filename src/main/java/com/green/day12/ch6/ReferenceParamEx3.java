@@ -25,6 +25,7 @@ public class ReferenceParamEx3 {
         }
         System.out.println(Arrays.toString(arr)); // 클래스매소드는
     }
+
     public static void sortArr(int[] arr){ // 오름차순 // 조건식에서 비교할 때 연산이 없어 더 좋습니다.
 
         int tmp = 0;
@@ -61,5 +62,6 @@ public class ReferenceParamEx3 {
             sum += n;
         }
         return sum;
+
     }
 }

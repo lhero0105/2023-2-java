@@ -21,7 +21,5 @@ public class ArrayEx7 {
             num[rIdx] = tmp;
         }
         System.out.println(Arrays.toString(num));
-
-
     }
 }

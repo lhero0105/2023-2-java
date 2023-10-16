@@ -16,10 +16,10 @@ public class ReferenceReturnEx {
         System.out.println("d.x == d2.x : " + (d.x == d2.x)); // true
         System.out.printf("d.d == d2.d : " + (d.d == d2.d)); // true
     }
-    static Data2 copyObj(Data2 a){
-        Data2 d = new Data2();
-        d.x = a.x;
-        d.d = a.d;
-        return d;
+    static Data2 copyObj(Data2 d){
+        Data2 a = new Data2();
+        a.x = d.x;
+        a.d = d.d;
+        return a;
     }
 }
