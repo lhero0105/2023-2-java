@@ -6,7 +6,7 @@ import com.green.day12.ch6.Card;
 public class CardTest2 {
     public static void main(String[] args) {
         //Card c = new Card(); // import
-        Card[] cards = makeCards();
+        Card[] cards = makeCards(); // static 이기에 객체화x
         //Card[] cards2 = makeCards(); // cards 와 cards2는 다른 존재입니다.
         System.out.println(cards.length);
 

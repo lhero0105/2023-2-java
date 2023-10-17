@@ -15,7 +15,7 @@ public class CardTest3 {
         Card[] cards = CardTest3.makeCards(); // 52개의 카드 배열을 답을 수 있는 매서드를 만듭니다
         System.out.println(cards.length);
 
-        for (Card c: cards) {
+        for (Card c: cards) { // 주솟값이 계속 바뀝니다.
             c.printYourSelf();
         }
 /*        for (int i = 0; i < cards.length; i++) {
@@ -32,6 +32,10 @@ public class CardTest3 {
             cArr[i] = new Card();
             cArr[i].pattern = pattern;
             cArr[i].denomination = denomination;
+            /*Card c = new Card(); // 두 문장은 동일합니다 (주솟값 개념)
+            cArr[i] = c; // 얕은 복사 >> 같은 객체
+            c.pattern = pattern;
+            c.denomination = denomination;*/
 
         }
 

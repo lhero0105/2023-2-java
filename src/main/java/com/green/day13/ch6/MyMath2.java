@@ -1,4 +1,7 @@
 package com.green.day13.ch6;
+
+import java.io.PrintStream;
+
 // 인스턴스가 되어야만 하니까 인스턴스 맴버라고 부릅니다.
 // 실무에선 클래스변수를 자주 사용하진 않습니다.
 public class MyMath2 {
@@ -7,6 +10,9 @@ public class MyMath2 {
 
 
     static void print(){
+        //System 스태틱이 붙어있음   out-스테틱변수(객체생성x) .- 레퍼런스
+        PrintStream ps = System.out;
+        ps.printf("");
         System.out.printf("staticNum : %d\n", staticNum); // 같은 공간에 있을 때 MyMath2를 생략가능 합니다.
         // System.out.println(num); // 사용 할 수 없습니다.
         // num 은 문서로, 객체화가 될 때 할당이되기에 사용할 수 없습니다.

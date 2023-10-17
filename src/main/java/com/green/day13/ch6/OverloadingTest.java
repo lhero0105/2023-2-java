@@ -9,5 +9,5 @@ public class OverloadingTest {
     void print(int n1, double n2){}
     void print(double n1, int n2){}
     void print(int n1, String str2){}
-    void print(String n1, int str2){}
+    void print(String n1, int str2){} // 오버로딩은 리턴타입과 상관없습니다.
 }
