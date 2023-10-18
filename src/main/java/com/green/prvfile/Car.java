@@ -5,7 +5,7 @@ public class Car {
     String gearType;//변속기 종류 - auto(자동), menual(수동)
     int door; // 문의 개수
     Car(){
-        this("white","auto",4);
+        this("whith", "auto", 4);
     }
     Car(String color){
         this(color, "auto", 4);
@@ -16,8 +16,7 @@ public class Car {
         this.door = door;
     }
     void printMySelf(){
-        System.out.printf("color = %s, gearType = %s, door =%n", color,gearType,door);
-
+        System.out.printf("color = %s, gearType = %s, door = %d\n", color, gearType, door);
     }
 }
 class CarTest{
