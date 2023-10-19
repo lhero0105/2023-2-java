@@ -13,14 +13,12 @@ class Tv2{
 }
 class CaptionTv2 extends Tv2{
     int channel;
-
     boolean caption;
     void displayCaption(String text){
         if(caption){
             System.out.println(text);
         }
     }
-
     @Override
     void channelUp(){
         channel += 2;

@@ -6,7 +6,7 @@ class Card{
     static final int NUM_MAX = 13; // 무늬 별 카드 수
     // static 생각 순서 -객체화 x > 메모리에 바로 올라갑니다.
 
-    static final int SPADE = 4;
+    static final int SPADE = 4; // 다른 Class에서 Card.SPADE 로 객체화 x 사용
     static final int DIAMOND = 3;
     static final int HEART = 2;
     static final int CLUVER = 1;
@@ -24,8 +24,6 @@ class Card{
         this.kind = kind;
         this.number = number;
     }
-
-
 
 }
 class Deck{
@@ -46,29 +44,31 @@ class Deck{
             System.out.println(c);
         }
     }
-    Card pick(int num){
-        return cardArr[num];
+    Card pick(int idx){
+        return cardArr[idx];
     }
     Card pick(){
         int rIdx = (int)(Math.random()*Card_NUM);
-        return cardArr[rIdx];
+        return pick(rIdx);
     }
-
-
-
-
+    void shuffle(){
+        Card tmp = null;
+        for (int i = 0; i < Card_NUM; i++) {
+            int rIdx = (int)(Math.random()*Card_NUM); // 0~51
+            tmp = pick(i);
+            cardArr[i] = pick(rIdx);
+            cardArr[rIdx] = tmp;
+        }
+        for ( Card c : cardArr ) {
+            System.out.println(c);
+        }
+    }
 }
 public class DeckTest {
     public static void main(String[] args) {
         Deck deck = new Deck();
         Card c1 = deck.pick(20);
-        System.out.println(c1);
-        Card c2 = deck.pick();
-        System.out.println(c2);
-
-
-        System.out.println(c2.toString());
-        System.out.println(c2);
+        deck.shuffle();
 
 
 
