@@ -39,7 +39,7 @@ class UtilsTest{
 
         int[] intArr = { 10, 12, 13, 14 };
         int sum = Utils.sumArr(intArr);
-        System.out.println(sum);
+        System.out.println(sum);//
 
         int[] rArr = Utils.mapPlus(intArr, 5);
         System.out.println(Arrays.toString(rArr)); // [ 15, 17, 18, 19]
