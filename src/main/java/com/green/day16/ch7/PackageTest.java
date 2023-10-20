@@ -2,7 +2,7 @@ package com.green.day16.ch7;
 
 // import com.green.day15.ch7.Child;
 import com.green.day13.ch6.MyMath2;
-//import com.green.day13.ch6.MyMath2.staticAbs;
+//import static com.green.day13.ch6.MyMath2.staticAbs;
 //import com.green.day13.ch6.MyMath2.staticNum;
 import com.green.day15.ch7.Parent;
 import com.green.day15.ch7.*; // ch7 아래 하위 클래스를 모두 불러옵니다.

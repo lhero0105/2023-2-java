@@ -40,6 +40,7 @@ class AnimalTest3{
         System.out.println("----끝----");
     }
 }
+
 class AnimalTest2{
     public static void main(String[] args) {
         Dog dog = new Dog();
@@ -52,11 +53,15 @@ class AnimalTest2{
     }
     private static void callCrying(Animal ani){
         ani.crying();
+        // bulldog.jump();
         if(ani instanceof Bulldog){
-            Bulldog bulldog = (Bulldog) ani;
+            Bulldog bulldog = (Bulldog) ani; // bulldog을 제외한 나머지는 fales, 자손타입의 부모객체주소값을 담을 수 없기 때문입니다
             bulldog.jump();
         }
-
+        if(ani instanceof Cat){
+            Cat cat = (Cat) ani;
+            cat.jump();
+        }
     }
 }
 
@@ -77,6 +82,9 @@ class Bulldog extends Dog{
     }
 }
 class Cat extends Animal{
+    public void jump(){
+        System.out.println("고양이 점프! 점프!");
+    }
     @Override
     public void crying(){
         System.out.println("야옹야옹");
