@@ -32,14 +32,18 @@ public class Class0102 {
     }
 }
 class Student{
-    static private String className ;
+    static private String className;
     static private int classC;
+    static int c=0;
+    void setClassName(){
+
+    }
     public void setClassName(String className, int classC){
         this.className = className;
         this.classC = classC;
     }
     public String getClassName(){
-        return className;
+        return this.className;
     }
     public int getClassC(){
         return classC;

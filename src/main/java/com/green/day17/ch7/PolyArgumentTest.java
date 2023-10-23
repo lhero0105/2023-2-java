@@ -14,6 +14,7 @@ public class PolyArgumentTest {
 class PolyArgumentTest2{
     public static void main(String[] args) {
         Buyer buyer = new Buyer();
+
         System.out.println(buyer); // money : 1000, bp : 0
         buyer.buy(new Tv());
         System.out.println(buyer); // 750 30
