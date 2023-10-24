@@ -20,11 +20,12 @@ public class ArrayListTest {
 class ArrayListTest2{
     public static void main(String[] args) {
         int v1 = 10;
-        Integer v2 = 10;
+        Integer v2 = 10; // 기본형의 객체형입니다 >
         System.out.println(v1 == v2);
-        List<Integer> list = new ArrayList(); //490p
-        //<>제네렉 : 안에 각방의 타입을 넣을 수 있습니다.
+        List<Integer> list = new ArrayList(); //490p // 제네릭안쓰고 아무거나 다 들어가는 애들은 좋지않습니다.
+        //<>제네릭 : 안에 각방의 타입을 넣을 수 있습니다.
         // add 할 때마다 들어납니다 > 자료구조
+        // list는 인터페이스입니다. 인터페이스는 겍체화가 될 수 없습니다. 리스트에 객체의 주솟값을 담겠다. 대표적으로 ArrayList LinkedList
         list.add(10);
         list.add(20);
         list.add(30);
@@ -35,14 +36,14 @@ class ArrayListTest2{
         System.out.println(list.get(1)); //error
 
         System.out.println("size : " + list.size()); // size() 매소드로 배열의 크기를 알 수 있습니다.
-
+        // 몇개의 값을 가지고있냐 ? size()
         // [0] : 10
         // [2] : 20
         // [1] : 30
         for (int i = 0; i < list.size(); i++) {
             System.out.printf("[%d]: %d\n", i, list.get(i));
         }
-        for ( int val : list ) {
+        for ( int val : list ) { // 스프링 사용 시 반복문 사용 할 일 x
             System.out.println(val);
         }
     }
