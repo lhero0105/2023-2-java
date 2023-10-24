@@ -4,7 +4,8 @@ package com.green.day19.ch7;
 // 추상클래스는 객체화가 안됩니다.
 // 자손마다 다르게 구현 될 것으로 구현 될 것으로 예상되는 경우 (나를 상속받은 애들이 모두가 다 다를 때, 반대로 몇몇 개만 할 땐 매소드로 합니다)
 // 강제성이 있습니다. >> 오버라이딩으로 무조건 구현해주어야 합니다.
-abstract public class Player { // 객체화 안되게 막기 위해 abstract를 붙힙니다
+// 객체화 안되게 막기 위해 abstract를 붙힙니다
+abstract public class Player {
     public abstract void play(int pos);
 
     public static void main(String[] args) {

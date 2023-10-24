@@ -14,6 +14,7 @@ class starcraftGame{
         units.add(unit);
         units.add(unit2);
 
+
         // 객체를 담을 때 > 배열, ArrayList 이용합니다.
     }
 }
