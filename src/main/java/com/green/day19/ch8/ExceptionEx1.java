@@ -52,7 +52,7 @@ class ExceptionEx1_3{
             System.out.println("수학적 예외");// 위와같은 경우 | 하나만 사용합니다.
         }catch (NullPointerException e){
             System.out.println("널포인트 예외;");
-        }catch (Exception e){
+        }catch (Exception e){ // Exception 은 가장 마지막에 있어야합니다.
             System.out.println("모든 예외");
         }
         System.out.println("끝!!!");

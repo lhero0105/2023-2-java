@@ -5,7 +5,7 @@ package com.green.day19.ch7;
 // 자손마다 다르게 구현 될 것으로 구현 될 것으로 예상되는 경우 (나를 상속받은 애들이 모두가 다 다를 때, 반대로 몇몇 개만 할 땐 매소드로 합니다)
 // 강제성이 있습니다. >> 오버라이딩으로 무조건 구현해주어야 합니다.
 // 객체화 안되게 막기 위해 abstract를 붙힙니다
-abstract public class Player {
+abstract public class Player {// 다중상속 > x 구현부에 같은 이름이있는 애들이 있을 수 있는 경우 충돌발생
     public abstract void play(int pos);
 
     public static void main(String[] args) {
@@ -31,6 +31,6 @@ class  VideoPlayer extends Player{
         System.out.println("Video Plat 위치 : " + pos);
     }
 }
-abstract class DvdPlayer extends Player{
+abstract class DvdPlayer extends Player{ // 구현안하고 자신이 추상매서드가 됩니다. (error 없애기위해)
 
 }
