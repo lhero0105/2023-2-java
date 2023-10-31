@@ -12,7 +12,7 @@ public class BoardDao { // data access object
             , entity.getTitle(), entity.getCtnts(), entity.getWriter());
         String sql = "INSERT INTO board(title, ctnts, writer) " +
                 "VALUES " +
-                "(?, ?, ?)";
+                "(?, ?, ?)";//
         System.out.println(sql);
         try {
             Connection con = Myconn.getConn();
