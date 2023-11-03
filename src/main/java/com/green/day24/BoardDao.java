@@ -18,9 +18,13 @@ public class BoardDao { // data access object - 데이터와 통신하는 객체
                         "VALUES " +
                         "('%s', '%s', '%s')"
                 , entity.getTitle(), entity.getCtnts(), entity.getWriter());
-        String sql = "INSERT INTO board(title, ctnts, writer) " +
+        String sql2 = "INSERT INTO board(title, ctnts, writer) " +
                 "VALUES " +
                 "(?, ?, ?)"; // prepare statement : 내부에서 알아서 홑따옴표을 붙이고 빼줍니다.
+        String sql = "INSERT INTO board " +
+                "SET title = ?" +
+                ", ctnts = ?" +
+                ", writer = ?"; // 오라클에서 사용이 되는지는 모릅니다.
         System.out.println(sql);
         Connection con = null;
         PreparedStatement ps = null;
@@ -35,14 +39,15 @@ public class BoardDao { // data access object - 데이터와 통신하는 객체
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            Myconn.close(con, ps);
+            Myconn.close(con, ps);// 리소스를 많이 잡아먹기에 꼭 닫아줍니다.(만들어진것의 역순step방식)
         }
         return result;
     }
 
+    // 검색, 페이징
     public static int delBoard(BoardEntity entity) {
         int result = 0;
-        String sqlD = "DELETE FROM board WHERE iboard = ?";
+        String sqlD = "DELETE FROM board WHERE iboard = ?";// 추가 쿼리문으로 내가 삭제 하는게 맞는지 검증
         Connection con = null;
         PreparedStatement ps = null;
         try {
@@ -57,7 +62,9 @@ public class BoardDao { // data access object - 데이터와 통신하는 객체
         }
         return result;
     }
-    public static List<BoardEntity> selBoardList(){ // 전부 다 사용하겠다는 의미입니다.
+    // List<BoardEntity>라도 모든 언어의 리턴타입은 하나이기에
+    // 이 타입에 빼곡하게 쌓아서 주솟값 하나를 리턴합니다.
+    public static List<BoardEntity> selBoardList(){ // 파라미터 x : 전부 다 사용하겠다는 의미입니다.
         List<BoardEntity> list = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;
@@ -122,13 +129,13 @@ public class BoardDao { // data access object - 데이터와 통신하는 객체
         PreparedStatement ps = null;
         ResultSet rs = null; // select 했을 때 결과물이 담기는 란입니다.
         String sql = "SELECT iboard, title, writer, ctnts, created_at, updated_at " +
-                     "FROM board WHERE iboard = ?";
+                     "FROM board WHERE iboard = ?"; // pk - 얻어오는 값은 0,1 두가지입니다
         try {
             con = Myconn.getConn();
             ps = con.prepareStatement(sql);
             ps.setInt(1, num);
             rs = ps.executeQuery(); // select 문만 무조건 executeQuery입니다. 나머지는 executeUpdate.
-            if (rs.next()){ // 레코드 수만큼 반복 > 첫번째 레코드를 호출합니다 없으면 false // if (rs.next()) > 한줄이 있는지 없는지
+            if (rs.next()){ // 레코드 수만큼 반복, next() 처음엔 첫줄, 다음 다음 줄 선택 > 첫번째 레코드를 호출합니다 없으면 false // if (rs.next()) > 한줄이 있는지 없는지
                 BoardEntity entity = new BoardEntity();
                 String title = rs.getString("title");
                 String ctnts = rs.getString("ctnts");

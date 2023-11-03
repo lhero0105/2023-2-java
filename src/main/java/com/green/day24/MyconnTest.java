@@ -26,9 +26,9 @@ class MyConnTest2 {
         // writer : 홍길동
         // DB에 insert 해주세요.
         BoardEntity BE = new BoardEntity();
-        BE.setTitle("오늘 Insert배움");
-        BE.setCtnts("java를 통해 board테이블에 값 넣어봄");
-        BE.setWriter("신난다");
+        BE.setTitle("추가!!");
+        BE.setCtnts("11월 02일 글 씀");
+        BE.setWriter("홍길동");
 
         int row = BoardDao.insBoard(BE);
     }
