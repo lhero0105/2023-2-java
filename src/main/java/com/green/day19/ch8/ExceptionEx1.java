@@ -50,6 +50,7 @@ class ExceptionEx1_3{
             arr[10] = 10;
         }catch (ArithmeticException | ArrayIndexOutOfBoundsException e){ // 이 중에 하나만 예외가 실행됩니다.
             System.out.println("수학적 예외");// 위와같은 경우 | 하나만 사용합니다.
+
         }catch (NullPointerException e){
             System.out.println("널포인트 예외;");
         }catch (Exception e){ // Exception 은 가장 마지막에 있어야합니다.
