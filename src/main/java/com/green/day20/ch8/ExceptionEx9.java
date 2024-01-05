@@ -15,4 +15,4 @@ public class ExceptionEx9 {
         System.out.println("--끝--");
     }
 }
-if(dto.gt){}
+/*if(dto.gt){}*/
